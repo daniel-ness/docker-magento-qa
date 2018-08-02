@@ -8,6 +8,7 @@ COPY composer.json /composer.json
 COPY phpcs.xml /phpcs.xml
 
 RUN composer update
+RUN chmod 777 /vendor/squizlabs/php_codesniffer/Codesniffer.conf
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
